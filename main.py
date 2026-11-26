@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # Entry for make.fun bounty u-swift-raven-16-the-long-roast-lawmakers-and-the-f3a3bdf7
+# One satirical sentence, 181 chars: the lawmaker, the Word doc, the conspiracy.
 """The Long Roast: Lawmakers and the File They Cannot Convert.
 
 Deterministic entry: writes exactly one satirical sentence to
@@ -15,11 +16,16 @@ LINE = (
 )
 
 
+def get_line():
+    return LINE
+
+
 def main():
+    line = get_line()
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as f:
-        f.write(LINE)
-    print(LINE)
+        f.write(line)
+    print(line)
 
 
 if __name__ == "__main__":
